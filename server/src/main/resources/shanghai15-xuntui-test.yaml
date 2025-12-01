@@ -1,20 +1,22 @@
 apiVersion: v1
 kind: Config
 clusters:
-  - name: "shanghai15-xuntui-test"
+  - name: "xx"
     cluster:
-      server: "https://rancher-sre.ctyun.cn:9443/k8s/clusters/c-m-jxzv5cxm"
+      server: "xx"
 
 users:
-  - name: "shanghai15-xuntui-test"
+  - name: "xx"
     user:
-      token: "kubeconfig-u-2lalgndhiksh2rq:s768rg975hmghn4499jzslvjh467prv2q2hrttdgzldfdxc96wsl99"
+      token: "xx"
 
 
 contexts:
-  - name: "shanghai15-xuntui-test"
+  - name: "xx"
     context:
-      user: "shanghai15-xuntui-test"
-      cluster: "shanghai15-xuntui-test"
+      user: "xx"
+      cluster: "xx"
 
-current-context: "shanghai15-xuntui-test"
+current-context: "xx"
+
+#从rancher或者集群获取生成kubeconfig
