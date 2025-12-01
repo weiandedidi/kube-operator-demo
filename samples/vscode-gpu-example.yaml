@@ -1,0 +1,20 @@
+apiVersion: ide.example.com/v1alpha1
+kind: DevMachine
+metadata:
+  name: devmachine-ml-user456
+  namespace: dev-environments
+spec:
+  cpu: 8
+  memory: 32Gi
+  gpu: 2
+  image: registry.example.com/vscode:gpu-cuda11.8
+  template: vscode-gpu
+  ingressDomain: ml-user456.dev.example.com
+  storageSize: 100Gi
+  mounts:
+    - type: s3
+      bucket: ml-models-bucket
+      mountPath: /mnt/models
+    - type: hfps
+      path: /data/huggingface
+      mountPath: /mnt/hf-cache

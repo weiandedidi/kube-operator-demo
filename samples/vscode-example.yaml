@@ -1,0 +1,13 @@
+apiVersion: ide.example.com/v1alpha1
+kind: DevMachine
+metadata:
+  name: devmachine-user123
+  namespace: dev-environments
+spec:
+  cpu: 4
+  memory: 8Gi
+  gpu: 0
+  image: registry.example.com/vscode:base
+  template: vscode-base
+  ingressDomain: user123.dev.example.com
+  storageSize: 20Gi

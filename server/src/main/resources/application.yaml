@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: devmachine-server
+server:
+  port: 8080
+
+# k8s的配置读取位置，也可以从数据库中读取
+kube:
+  config: classpath:shanghai15-xuntui-test.yaml
+
+
+# Logging
+logging:
+  level:
+    com.example.devmachine: DEBUG
+    io.fabric8.kubernetes: INFO

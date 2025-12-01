@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- ide_v1alpha1_devmachine.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

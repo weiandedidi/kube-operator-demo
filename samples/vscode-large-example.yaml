@@ -1,0 +1,27 @@
+
+apiVersion: ide.example.com/v1alpha1
+kind: DevMachine
+metadata:
+  name: devmachine-bigdata-user789
+  namespace: dev-environments
+spec:
+  cpu: 16
+  memory: 64Gi
+  gpu: 4
+  image: registry.example.com/vscode:large-cuda12.0
+  template: vscode-large
+  ingressDomain: bigdata-user789.dev.example.com
+  storageSize: 500Gi
+  mounts:
+    - type: s3
+      bucket: training-datasets
+      mountPath: /mnt/datasets
+    - type: s3
+      bucket: model-checkpoints
+      mountPath: /mnt/checkpoints
+    - type: nfs
+      path: /shared/team-resources
+      mountPath: /mnt/shared
+    - type: hfps
+      path: /data/huggingface-cache
+      mountPath: /root/.cache/huggingface

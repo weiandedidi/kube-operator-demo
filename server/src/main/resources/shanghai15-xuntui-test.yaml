@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Config
+clusters:
+  - name: "shanghai15-xuntui-test"
+    cluster:
+      server: "https://rancher-sre.ctyun.cn:9443/k8s/clusters/c-m-jxzv5cxm"
+
+users:
+  - name: "shanghai15-xuntui-test"
+    user:
+      token: "kubeconfig-u-2lalgndhiksh2rq:s768rg975hmghn4499jzslvjh467prv2q2hrttdgzldfdxc96wsl99"
+
+
+contexts:
+  - name: "shanghai15-xuntui-test"
+    context:
+      user: "shanghai15-xuntui-test"
+      cluster: "shanghai15-xuntui-test"
+
+current-context: "shanghai15-xuntui-test"

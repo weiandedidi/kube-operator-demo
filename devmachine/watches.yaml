@@ -1,0 +1,8 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: ide.example.com
+  version: v1alpha1
+  kind: DevMachine
+  chart: helm-charts/devmachine
+  watchDependentResources: true
+#  crd中的sepc会作为value平铺展开，这里不再watch其他字段会导致渲染不出来
+# +kubebuilder:scaffold:watch
